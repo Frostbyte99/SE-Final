@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Reservation Info Page</title>
+	</head>
+
+	<body>
+        <link rel="stylesheet" href="styles.css">
+
+		<div id = "title">
+			<h1>Let's Make A Guest Reservation</h1>
+		</div>
+
+		<div id= "welcome">
+			<h2>Welcome! Please Fill In the Following Fields to Make a Reservation:</h2>
+		</div>
+		
+		<div id ="reservation-inputs">
+
+		    <form id="select-input" action="GuestReservationInfo.php" method="POST">	
+
+                <strong>Restaurant hours are 7pm to 9pm:</strong>
+                <br>
+                    <select name="time" id="get-time" required>
+                        <option value="7:00 PM">7:00 PM</option>
+                        <option value="8:00 PM">8:00 PM</option>
+                        <option value="9:00 PM">9:00 PM</option>
+                    </select>
+                <br>
+                <br>
+                    <strong>Enter Day:</strong>
+                    <br>
+                    <select name="day" id="get-day" required>
+                        <option value="Monday">Monday</option>
+                        <option value="Tuesday">Tuesday</option>
+                        <option value="Wednesday">Wednesday</option>
+                        <option value="Thursday">Thursday</option>
+                        <option value="Friday">Friday</option>
+                        <option value="Saturday">Saturday</option>
+                        <option value="Sunday">Sunday</option>
+                    </select>
+                    
+                <br>	
+                <br>
+                <strong>Enter Number of Guests:</strong>
+                <br>
+                    <input type= "number" min = "0" placeholder = "Party Size" name="guestnum" id="guestnum">
+                <br>
+                <br>
+                <input type = "submit" value = "Enter">
+                <br>
+                <br>
+            </form>
+
+            <form id="cancel-input" action="LoginErrorEvent1.php" method="POST">
+                <input type="submit" value = "Cancel">
+            </form>
+
+		</div>
+	</body>
+
+
+</html>

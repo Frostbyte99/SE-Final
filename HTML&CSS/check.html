@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Register</title>
+  </head>
+  <body>
+    <div class="form-header">
+      <h1 class="title">Checking Details</h1>
+      <p>Please fill in this form to finish creating account</p>
+    </div>
+    <hr />
+    <div class="container">
+      <form action="check.php" method="POST">
+        <label for="Account Number">Enter your Account Number</label>
+        <div class="account">
+          <input
+            type="numeric"
+            placeholder="Account Number"
+            id="accountnumber"
+            name="accountnumber"
+            pattern="\d{9}"
+            maxlength="9"
+            required
+          />
+        </div>
+        <br />
+        <label for="Routing Number">Enter your Routing Number</label>
+        <div class="routing">
+          <input
+            type="numeric"
+            placeholder="Enter Routing Number"
+            id="routingnumber"
+            name="routingnumber"
+            pattern="\d{9}"
+            maxlength="9"
+            required
+          />
+        </div>
+        <br />
+        <hr />
+        <input type="submit" value="Save" />
+      </form>
+    </div>
+  </body>
+</html>

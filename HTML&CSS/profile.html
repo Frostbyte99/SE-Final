@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .center {
+        text-align: center;
+        margin: auto;
+        width: 60%;
+        border: 3px solid #73ad21;
+        padding: 10px;
+      }
+
+      .container select {
+        width: 50%;
+        clear: both;
+      }
+
+      input[type="text"],
+      input[type="password"],
+      input[type="numeric"],
+      input[type="tel"] {
+        width: 80%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        display: block;
+        border: none;
+        background: #f1f1f1;
+      }
+    </style>
+    <title>Register</title>
+  </head>
+  <body>
+    <div class="container">
+      <form action="register.php" method="POST">
+        <h1>Register</h1>
+        <p>Please fill in this form to create an account</p>
+        <hr />
+
+        <label for="username">Username</label>
+        <input
+          type="text"
+          placeholder="Enter Username"
+          name="username"
+          id="username"
+          pattern="[a-zA-Z0-9]+"
+          required
+        />
+
+        <label for="email">Email</label>
+        <input
+          type="text"
+          placeholder="Enter Email"
+          name="email"
+          id="email"
+          required
+        />
+
+        <label for="password">Password</label>
+        <input
+          type="password"
+          placeholder="Enter Password"
+          name="password"
+          id="password"
+          minlength="8"
+          pattern="[^\s]+"
+          required
+        />
+
+        <label for="phone">Enter your phone number</label>
+        <input
+          type="tel"
+          placeholder="Enter Phone Number (128-555-9999)"
+          id="phone"
+          name="phone"
+          pattern="\d{3}[\-]\d{3}[\-]\d{4}"
+          required
+        />
+
+        <h2>Billing Address</h2>
+        <hr />
+        <label
+          >First name:<input
+            class="input-adjust"
+            type="text"
+            id="firstname1"
+            pattern="[a-zA-Z0-9]+"
+            required
+        /></label>
+        <label
+          >Last name:<input
+            class="input-adjust"
+            type="text"
+            id="lastname1"
+            pattern="[a-zA-Z0-9]+"
+            required
+        /></label>
+        <label
+          >Address:<input
+            class="input-adjust"
+            type="text"
+            id="address1"
+            pattern="[a-zA-Z0-9]+"
+            required
+        /></label>
+        <label
+          >City:<input class="input-adjust" type="text" id="city1" required
+        /></label>
+        <label
+          >Country:<input
+            class="input-adjust"
+            type="text"
+            id="country1"
+            pattern="[a-zA-Z0-9]+"
+            required
+        /></label>
+
+        <input type="checkbox" id="b-same-m" name="b-same-m" value="b-same-m" />
+        <label for="b-same-m">Billing Address same as Mailing Address</label
+        ><br />
+
+        <h2>Mailing Address</h2>
+        <hr />
+
+        <label
+          >First name:<input class="input-adjust" type="text" id="firstname2"
+        /></label>
+        <label
+          >Last name:<input class="input-adjust" type="text" id="lastname2"
+        /></label>
+        <label
+          >Address:<input class="input-adjust" type="text" id="address2"
+        /></label>
+        <label
+          >City:<input class="input-adjust" type="text" id="city2"
+        /></label>
+        <label
+          >Country:<input class="input-adjust" type="text" id="country2"
+        /></label>
+
+        <label for="Prefered Payment Method">Choose a Payment Method</label>
+
+        <select name="payment-method" id="payment-method">
+          <option value="card">Credit Card</option>
+          <option value="check">Check</option>
+          <option value="cash">Cash</option>
+        </select>
+
+        <hr />
+        <input type="submit" value="Next" />
+      </form>
+    </div>
+  </body>
+</html>

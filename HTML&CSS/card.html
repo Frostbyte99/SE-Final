@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Register</title>
+  </head>
+  <body>
+    <form class="credit-card" action="card.php" method="POST">
+      <div class="form-header">
+        <h1 class="title">Credit Card Details</h1>
+        <p>Please fill in this form to finish creating account</p>
+      </div>
+      <hr />
+
+      <br />
+      <label>Enter Credit Card Number</label>
+      <div class="form-body">
+        <input
+          type="numeric"
+          class="card-number"
+          name="card-number"
+          placeholder="Card Number"
+        />
+
+        <div class="date-field">
+          <div class="month">
+            <br />
+            <label>Enter the Month</label>
+            <select name="Month">
+              <option value="january">January</option>
+              <option value="february">February</option>
+              <option value="march">March</option>
+              <option value="april">April</option>
+              <option value="may">May</option>
+              <option value="june">June</option>
+              <option value="july">July</option>
+              <option value="august">August</option>
+              <option value="september">September</option>
+              <option value="october">October</option>
+              <option value="november">November</option>
+              <option value="december">December</option>
+            </select>
+          </div>
+
+          <div class="year">
+            <label>Enter the Year</label>
+            <select name="Year">
+              <option value="2016">2016</option>
+              <option value="2017">2017</option>
+              <option value="2018">2018</option>
+              <option value="2019">2019</option>
+              <option value="2020">2020</option>
+              <option value="2021">2021</option>
+              <option value="2022">2022</option>
+              <option value="2023">2023</option>
+              <option value="2024">2024</option>
+            </select>
+          </div>
+        </div>
+
+        <br />
+        <label>Enter the Security Number</label>
+        <div class="card-verification">
+          <div class="cvv-input">
+            <span title="3-4 digits found on the back the card">
+              <input
+                type="numeric"
+                name="cvv"
+                placeholder="CVV"
+                maxlength="4"
+                minlength="3"
+              />
+            </span>
+          </div>
+        </div>
+        <br />
+        <hr />
+        <input type="submit" value="Save" />
+      </div>
+    </form>
+  </body>
+</html>

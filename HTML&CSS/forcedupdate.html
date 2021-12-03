@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Register</title>
+
+  </head>
+
+  <body>
+    <form class="credit-card" action="registercard.php" method="POST">
+        
+      <div class="form-header">
+        <h1 class="title">Sorry, But Due To High Traffic We Need A Credit Card On File</h1>
+        <p>Please Add A Card Or Press Cancel To Go Back To Reservation Page</p>
+      </div>
+    
+      <div class="form-body">
+        <input type="numeric" name="card-number" placeholder="Card Number">
+      </div>
+
+      <br>
+
+      <div class="card-verification">
+        <div class="cvv-input">
+            <input name="ccv" placeholder="CVV">
+        </div>
+      </div>
+
+      <br>
+    
+        <div class="date-field">
+          <div class="month">
+            <select name="Month">
+              <option value="January">January</option>
+              <option value="February">February</option>
+              <option value="March">March</option>
+              <option value="April">April</option>
+              <option value="May">May</option>
+              <option value="June">June</option>
+              <option value="July">July</option>
+              <option value="August">August</option>
+              <option value="September">September</option>
+              <option value="October">October</option>
+              <option value="November">November</option>
+              <option value="December">December</option>
+            </select>
+          </div>
+
+          <br>
+
+          <div class="year">
+              <select name="Year">
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+              </select>
+          </div>
+        </div>
+
+        <br>
+
+        <input type="submit" value="Save"></button>
+      </div>
+    </form>
+
+   <br> 
+
+    <form class="nope" action="cancelReservation.php" method="POST">
+        <input type="submit" value="Cancel"></button>
+    </form>
+
+  </body>
+</html>

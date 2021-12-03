@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Register</title>
+  </head>
+  <body>
+    <div class="container">
+      <form action="registration.php" method="POST">
+        <h1>Register</h1>
+        <p>Please fill in this form to create an account</p>
+        <hr />
+
+        <label for="username">Enter Username</label>
+
+        <div>
+          <input
+            type="text"
+            placeholder="Username"
+            name="username"
+            id="username"
+            pattern="[a-zA-Z0-9]+"
+            required
+          />
+        </div>
+        <br />
+        <label for="email">Enter Email</label>
+        <div>
+          <input
+            type="text"
+            placeholder="Email"
+            name="email"
+            id="email"
+            required
+          />
+        </div>
+        <br />
+        <label for="password">Enter Password</label>
+        <div>
+          <input
+            type="password"
+            placeholder="Password"
+            name="password"
+            id="password"
+            minlength="8"
+            pattern="[^\s]+"
+            required
+          />
+        </div>
+        <br />
+
+        <label for="phone">Enter Phone Number</label>
+        <div>
+          <input
+            type="tel"
+            placeholder="Phone Number (128-555-9999)"
+            id="phone"
+            name="phone"
+            pattern="\d{3}[\]\d{3}[\]\d{4}"
+            required
+          />
+        </div>
+        <br />
+        <label>Enter First name:</label>
+        <div>
+          <input
+            class="input-adjust"
+            type="text"
+            placeholder="First Name"
+            name="firstname1"
+            id="firstname1"
+            pattern="[a-zA-Z0-9]+"
+            required
+          />
+        </div>
+        <br />
+        <label>Enter Last name:</label>
+        <div>
+          <input
+            class="input-adjust"
+            type="text"
+            placeholder="Last Name"
+            name="lastname1"
+            id="lastname1"
+            pattern="[a-zA-Z0-9]+"
+            required
+          />
+        </div>
+        <br />
+        
+
+        <br />
+        <label>Enter Mailing Address:</label>
+        <div>
+          <input
+            class="input-adjust"
+            type="text"
+            placeholder="Mailing Address"
+            name="MA"
+            id="MA"
+            required
+          />
+        </div>
+        <br />
+
+
+        <br />
+        <label>Enter Billing Address:</label>
+        <div>
+          <input
+            class="input-adjust"
+            type="text"
+            placeholder="Billing Address"
+            name="BA"
+            id="BA"
+            required
+          />
+        </div>
+        <br />
+
+
+        <label for="Prefered Payment Method">Choose a Payment Method</label>
+
+        <select name="payment-method" id="payment-method">
+          <option value="card">Credit Card</option>
+          <option value="check">Check</option>
+          <option value="cash">Cash</option>
+        </select>
+
+        <hr />
+        <input type="submit" value="Next" />
+      </form>
+
+      <br>
+      
+      <form id="cancel-input" action="LoginErrorEvent1.php" method="POST">
+        <input type="submit" value = "Cancel">
+      </form>
+
+    </div>
+  </body>
+</html>
